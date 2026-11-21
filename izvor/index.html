@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motor 3.0 TDI CRCA: pregled tržišta</title>
+<meta name="description" content="Rabljeni i remontirani motori, glave i dijelovi za Audi Q7 4L, VW Touareg 7P i Porsche Cayenne 92A (180 kW). Ponude iz 15 država, pregledano 21.11.2026.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#15181c">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:url" content="https://motor-crca.netlify.app/">
+<meta property="og:title" content="Motor 3.0 TDI CRCA: pregled tržišta">
+<meta property="og:description" content="Rabljeni i remontirani motori, glave i dijelovi za Audi Q7, Touareg i Cayenne (180 kW). Ponude iz 15 država.">
+<meta property="og:image" content="https://motor-crca.netlify.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Crtež motora V6 3.0 TDI i naslov Motor 3.0 TDI CRCA: pregled tržišta">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-14 -14 148 148'%3E%3Crect x='-14' y='-14' width='148' height='148' rx='24' fill='%2315181c'/%3E%3Crect width='28' height='120' fill='%23fff'/%3E%3Cpolygon points='44,0 96,0 44,38' fill='%23fff'/%3E%3Cpolygon points='120,14 120,106 62,60' fill='%23e31e28'/%3E%3Cpolygon points='44,82 44,120 96,120' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE work: a sourcing report for partners, calm and exact
+   IDEA an engineering drawing sheet: graphite blueprint band, the engine drawn in line work with real dimensions
+   PICTURE line drawing of the V6 TDI (2 banks x 3 cylinders, bore 83, stroke 91.4) on a blueprint grid; charts on the overview tab
+   COLOUR graphite #15181c band, aluminium ground, Komadar red #e31e28 accent (as text only from 24 px), steel blue for remanufactured, green for nearby parts
+   TYPE Barlow Condensed 700 display + Barlow text (Komadar brand tokens)
+   LAYOUT hero (title + KPIs left, drawing right), sticky tabs, one tab visible; phone stacks title, drawing, KPIs, tabs scroll */
+:root{color-scheme:light dark;--bg:light-dark(#eef0f2,#0f1113);--card:light-dark(#fff,#1a1d21);--ink:light-dark(#111418,#eef0f2);--mute:light-dark(#5a6068,#a1a7af);--line:light-dark(#d6dade,#2b3036);--hero:#15181c;--hink:#f2f4f6;--hmute:#a9b0b8;--or:#e31e28;--bl:light-dark(#1f63d1,#5b9bff);--gr:light-dark(#22844f,#4cc985);--vi:light-dark(#6d4cc2,#a98bff)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 Barlow,"Segoe UI",Arial,sans-serif;overflow-x:clip}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+.hero{border-bottom:2px solid var(--or);color:var(--hink);background-color:var(--hero);background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px),repeating-linear-gradient(90deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px)}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:center;padding:clamp(26px,4vw,52px) 0 clamp(20px,3vw,36px)}
+.hero h1{font-size:clamp(32px,4.6vw,50px);line-height:1.04;letter-spacing:-.025em;margin:0 0 12px;text-wrap:balance}
+.hero h1 span{color:var(--or)}
+.hero p.sub{color:var(--hmute);margin:0 0 22px;max-width:56ch;font-size:17px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px}
+.kpi div{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:10px;padding:12px 14px}
+.kpi b{display:block;font-size:clamp(22px,2.6vw,28px);line-height:1.1;font-weight:700;white-space:nowrap}
+.kpi span{font-size:13px;color:var(--hmute)}
+.draw{width:100%;aspect-ratio:36/26}
+.draw svg{width:100%;height:100%}
+.meta-line{font-size:13px;color:var(--hmute);padding-bottom:14px}
+nav.tabs{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs a{flex:none;display:block;padding:14px 14px 12px;font-size:15px;font-weight:500;color:var(--mute);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs a[aria-current=page]{color:var(--ink);border-color:var(--or)}
+nav.tabs a:focus-visible{outline:3px solid var(--or);outline-offset:-3px}
+.tab{display:none;padding:clamp(20px,3vw,36px) 0 48px}
+.tab.on{display:block}
+h2{font-size:clamp(24px,3vw,30px);line-height:1.1;letter-spacing:-.015em;margin:0 0 6px}
+h3{font-size:18px;margin:0 0 4px}
+.lead{color:var(--mute);margin:0 0 18px;max-width:72ch}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:14px}
+.pane{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.pane>p{margin:0 0 10px;font-size:14px;color:var(--mute)}
+.fig{position:relative;height:300px}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.fig text{font:13px Barlow,sans-serif;fill:var(--mute)}
+.key{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 0 0;font-size:13px;color:var(--mute)}
+.key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.bars{display:grid;gap:9px;font-size:14px}
+.br{display:grid;grid-template-columns:minmax(0,1fr) 72px;gap:10px;align-items:end}
+.br .t{display:flex;justify-content:space-between;gap:8px;color:var(--mute);margin-bottom:3px}
+.br .t span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.br .t span:last-child{white-space:nowrap}
+.trk{height:12px;background:var(--line);border-radius:0 4px 4px 0}
+.trk i{display:block;height:12px;border-radius:0 4px 4px 0}
+.br b{text-align:right;white-space:nowrap}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:14px;margin:14px 0}
+.pick{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:6px;position:relative}
+.pick .n{position:absolute;top:14px;right:16px;font-size:34px;font-weight:700;color:var(--line);line-height:1}
+.pick .pr{font-size:26px;font-weight:700}
+.ctl{display:grid;gap:10px;margin-bottom:6px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row b{font-size:14px;color:var(--mute);font-weight:500;margin-right:4px;white-space:nowrap}
+button.c{font:inherit;font-size:15px;min-height:40px;padding:6px 14px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+button.c[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button.c:focus-visible,input:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+input.q{font:inherit;font-size:16px;min-height:44px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:min(100%,320px)}
+.count{font-size:14px;color:var(--mute)}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px;margin-top:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.nm{font-weight:700;font-size:17px;line-height:1.25}
+.pr{font-weight:700;font-size:20px;white-space:nowrap}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:14px;color:var(--mute)}
+.meta span{white-space:nowrap}
+.tag{display:inline-block;font-size:12px;font-weight:500;padding:2px 9px;border-radius:10px;color:#fff;margin-right:6px}
+.note{font-size:14px;margin:0}
+.card a,.pick a{color:var(--bl);font-size:14px;font-weight:500}
+.rk{font-size:13px;font-weight:700;color:var(--ink)}
+.small{font-size:13px;color:var(--mute)}
+.near{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--gr);border-radius:0 12px 12px 0;padding:18px 20px;display:grid;gap:12px}
+.near .head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;align-items:center}
+.badge{display:inline-block;background:var(--gr);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:10px;margin-right:6px}
+.tel{font-size:24px;font-weight:700;white-space:nowrap}
+.near ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:2px 22px;font-size:15px}
+.near li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dotted var(--line);padding:4px 0}
+.near li b{white-space:nowrap}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--mute)}
+tr.ok td:first-child{box-shadow:inset 4px 0 0 var(--gr)}
+tr.no td:first-child{box-shadow:inset 4px 0 0 var(--or)}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.notes .pane h3{margin-bottom:6px}
+.notes .pane p{font-size:15px;color:var(--ink);margin:0}
+footer{border-top:1px solid var(--line);padding:18px 0 28px;font-size:13px;color:var(--mute)}
+.hero h1,h2,.kpi b,.pick .n,.lock h1{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700;letter-spacing:0}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}.draw{max-width:460px;order:-1}}
+@media(max-width:600px){.kpi{grid-template-columns:1fr 1fr}table{font-size:13px}th,td{padding:8px}.fig{height:260px}.hero p.sub{font-size:16px}}
+.pdf{margin-top:14px;font:inherit;font-size:15px;font-weight:600;min-height:44px;padding:8px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--hink);cursor:pointer}
+.pdf:hover{border-color:#fff}.pdf:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+.ispis,.pw-print{display:none}
+@media print{
+@page{size:A4;margin:12mm}
+:root{color-scheme:light!important}
+body{background:#fff;color:#111;font-size:10.5pt;line-height:1.4}
+nav.tabs,.tab,.lock,.pdf,.draw,.meta-line{display:none!important}
+.hero{background:#fff;color:#111;border-bottom:2px solid #e31e28}
+.hero h1{font-size:24pt}.hero p.sub{color:#333;font-size:10.5pt;margin-bottom:10px}
+.hgrid{grid-template-columns:1fr;padding:0 0 10px}
+.kpi{grid-template-columns:repeat(4,1fr)}.kpi div{border-color:#ccc;background:none}.kpi span{color:#444}
+#t-pregled{display:block!important;padding:10px 0 0;animation:none}
+#t-pregled .grid2,#t-pregled .lead{display:none}
+#t-pregled h2{font-size:15pt}
+.picks{grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0}
+.pick{border-color:#ccc;padding:10px 12px;break-inside:avoid}.pick a{display:none}.pick .pr{font-size:16pt}
+.ispis{display:block;margin-top:10px}
+.ispis h2{font-size:13pt;margin:10px 0 4px}
+.ispis table{font-size:8.5pt}.ispis th,.ispis td{padding:2px 5px;border-color:#ddd}
+.ispis tr{break-inside:avoid}
+.ispis p{font-size:10pt;margin:0}
+.tag{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+footer{border-color:#ccc;padding:8px 0 0}.pw-print{display:inline}
+.wrap{max-width:none;padding:0}
+}
+@media(prefers-reduced-motion:no-preference){.tab.on{animation:in .25s ease both}@keyframes in{from{opacity:0;transform:translateY(6px)}}.piston{animation:pump 2.4s ease-in-out infinite}.piston.b{animation-delay:-1.2s}@keyframes pump{50%{transform:translateY(10px)}}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="wrap">
+<div class="hgrid">
+<div>
+<h1>Motor 3.0 TDI <span>CRCA</span>: pregled tržišta</h1>
+<p class="sub">Rabljeni, remontirani i goli motori, glave i dijelovi te auti donori za Audi Q7 4L, VW Touareg 7P i Porsche Cayenne 92A (180 kW). Ponude iz 15 država, poredane po cijeni, kilometraži i udaljenosti.</p>
+<div class="kpi" id="kpi"></div>
+<button class="pdf" type="button" id="pdf">Spremi kao PDF</button>
+</div>
+<div class="draw" aria-hidden="true">
+<svg viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g stroke="rgba(255,255,255,.35)" stroke-width="1">
+<path d="M180 214 L180 236" stroke-dasharray="3 4"/>
+<path d="M40 236 H320"/>
+</g>
+<g transform="translate(180 196)">
+<circle r="30" stroke="#f2f4f6" stroke-width="1.6"/>
+<circle r="9" stroke="#e31e28" stroke-width="1.6"/>
+<path d="M-60 34 H60 L46 -10 H-46 Z" stroke="rgba(255,255,255,.55)" stroke-width="1.3"/>
+<g transform="rotate(-45)">
+<rect x="-30" y="-176" width="60" height="140" rx="4" stroke="#f2f4f6" stroke-width="1.6"/>
+<path d="M-30 -136 H30 M-30 -96 H30" stroke="rgba(255,255,255,.3)"/>
+<g class="piston"><rect x="-24" y="-132" width="48" height="26" rx="3" stroke="#e31e28" stroke-width="1.8"/><path d="M0 -106 L0 -18" stroke="#e31e28" stroke-width="1.6"/></g>
+<path d="M-38 -176 H38 V-196 H-38 Z" stroke="rgba(255,255,255,.55)"/>
+<path d="M-16 -196 V-210 M16 -196 V-210" stroke="rgba(255,255,255,.55)"/>
+</g>
+<g transform="rotate(45)">
+<rect x="-30" y="-176" width="60" height="140" rx="4" stroke="#f2f4f6" stroke-width="1.6"/>
+<path d="M-30 -136 H30 M-30 -96 H30" stroke="rgba(255,255,255,.3)"/>
+<g class="piston b"><rect x="-24" y="-132" width="48" height="26" rx="3" stroke="#e31e28" stroke-width="1.8"/><path d="M0 -106 L0 -18" stroke="#e31e28" stroke-width="1.6"/></g>
+<path d="M-38 -176 H38 V-196 H-38 Z" stroke="rgba(255,255,255,.55)"/>
+<path d="M-16 -196 V-210 M16 -196 V-210" stroke="rgba(255,255,255,.55)"/>
+</g>
+</g>
+<g font-family="Barlow,sans-serif" font-size="12" fill="#a9b0b8" stroke="none">
+<text x="180" y="70" text-anchor="middle">provrt Ø 83 mm</text>
+<text x="180" y="88" text-anchor="middle">hod 91,4 mm</text>
+<text x="180" y="254" text-anchor="middle">V6 · 90° · 2967 cm³ · 180 kW</text>
+</g>
+<g class="powered" transform="translate(8 9)">
+<g transform="scale(.1167)"><rect x="0" y="0" width="28" height="120" fill="#fff"/><polygon points="44,0 96,0 44,38" fill="#fff"/><polygon points="120,14 120,106 62,60" fill="#e31e28"/><polygon points="44,82 44,120 96,120" fill="#fff"/></g>
+<text x="20" y="11.5" font-family="Barlow,sans-serif" font-size="11.5" fill="#a9b0b8" stroke="none">Powered by <tspan fill="#f2f4f6" font-weight="700">Komadar</tspan></text>
+</g>
+</svg>
+</div>
+</div>
+<div class="meta-line">Pregledano 21.11.2026. Cijene, kilometraža i jamstva prema oglasima; dostupnost nije potvrđena kontaktom s prodavačima.</div>
+</div>
+</header>
+
+<nav class="tabs" aria-label="Odjeljci"><div class="wrap" id="tabs">
+<a href="#pregled">Pregled</a>
+<a href="#motori">Motori</a>
+<a href="#dijelovi">Dijelovi</a>
+<a href="#donori">Auti donori</a>
+<a href="#kompatibilnost">Kompatibilnost</a>
+<a href="#napomene">Napomene</a>
+</div></nav>
+
+<main class="wrap">
+<section class="tab" id="t-pregled">
+<h2>Najbolje ponude na jednom mjestu</h2>
+<p class="lead">Ocjena kombinira ukupnu cijenu, kilometražu, jamstvo i mogućnost pregleda uživo. Prve tri preporuke:</p>
+<div class="picks" id="picks"></div>
+<div class="grid2">
+<div class="pane"><h3>Cijena prema kilometraži</h3><p>Najbolje su ponude dolje lijevo: jeftino i malo kilometara. Remontirani motori su na 0 km.</p>
+<div class="fig"><svg id="sv" role="img" aria-label="Cijena motora prema kilometraži"></svg></div>
+<div class="key"><span><i style="background:var(--bl)"></i>Remontiran</span><span><i style="background:var(--or);border-radius:2px"></i>Rabljeni kompletan</span><span><i style="background:var(--vi);border-radius:0"></i>Rabljeni goli</span></div></div>
+<div class="pane"><h3>Najboljih 10 prema ukupnoj ocjeni</h3><p>Traka je ukupna cijena; uz nju kilometraža i jamstvo.</p><div class="bars" id="bars"></div></div>
+</div>
+</section>
+
+<section class="tab" id="t-motori">
+<h2>Motori</h2>
+<p class="lead">Svi rabljeni, remontirani i goli motori CRCA s cijenom ili kontaktom. Filtriraj i poredaj po potrebi.</p>
+<div class="ctl">
+<div class="row" id="m-sort"><b>Poredak</b><button class="c" data-v="best">Najbolja kupnja</button><button class="c" data-v="price">Cijena</button><button class="c" data-v="km">Kilometraža</button><button class="c" data-v="dist">Udaljenost</button></div>
+<div class="row" id="m-cat"><b>Vrsta</b><button class="c" data-v="all">Svi</button><button class="c" data-v="komplet">Rabljeni kompletni</button><button class="c" data-v="remont">Remontirani</button><button class="c" data-v="goli">Goli</button></div>
+<div class="row" id="m-ctry"><b>Država</b></div>
+<div class="row"><input class="q" id="m-q" type="search" placeholder="Traži prodavača ili grad" aria-label="Traži motore"><span class="count" id="m-cnt"></span></div>
+</div>
+<div class="list" id="m-list"></div>
+</section>
+
+<section class="tab" id="t-dijelovi">
+<h2>Dijelovi pojedinačno</h2>
+<p class="lead">Ako ne treba cijeli motor: glave, pumpe, brizgaljke, brtve i ostalo.</p>
+<div class="near">
+<div class="head"><div><span class="badge">~35 km od Kostanjevca</span><span class="badge" style="background:var(--bl)">rastavljeni CRCA</span><h3 style="margin-top:8px">Pisarovina: cijeli motor u dijelovima</h3></div><div class="tel">095 343 8102</div></div>
+<p class="note">Prodavač max39 (Lučelnica, Pisarovina) rastavlja motor 3.0 TDI CRCA i prodaje dijelove pojedinačno. Najbliži izvor, sve se može pregledati uživo. Blok, klipovi i radilica nisu u oglasima.</p>
+<ul>
+<li>Glava motora CRCA (059354DS)<b>300 €</b></li><li>Glava motora CRCA (059353EK)<b>300 €</b></li><li>Visokotlačna (rail) pumpa<b>260 €</b></li><li>EGR hladnjak<b>230 €</b></li><li>Motorna instalacija<b>170 €</b></li><li>Poklopac ventila<b>100 €</b></li><li>Pumpa i brizgaljke<b>100 €</b></li><li>Rail rampa<b>85 €</b></li><li>Rail rampa sa senzorom<b>80 €</b></li><li>Kućište filtera ulja<b>65 €</b></li><li>Remenica radilice<b>60 €</b></li><li>Nosač alternatora<b>55 €</b></li><li>Nosač motora (2 kom)<b>50 € / kom</b></li><li>Hladnjak ulja<b>40 €</b></li><li>Nosač turbine<b>40 €</b></li><li>Ventil turba<b>40 €</b></li><li>Usisna grana, klapna<b>30 €</b></li><li>Senzor radilice<b>30 €</b></li><li>Cijev EGR<b>20–30 €</b></li><li>Ventil grijanja<b>25 €</b></li><li>Nosač servo pumpe<b>25 €</b></li><li>Mjerač, stanica ulja<b>20 €</b></li><li>Nosač kompresora klime<b>15 €</b></li><li>Nosač dizni<b>8 €</b></li>
+</ul>
+<div class="small">Cijene prema oglasima od 15.11.2026. · <a href="https://www.njuskalo.hr/korisnik/max39" target="_blank" rel="noopener" style="color:var(--bl)">Svi oglasi prodavača</a></div>
+</div>
+<h3 style="margin-top:26px">Ostali izvori dijelova</h3>
+<div class="ctl" style="margin-top:8px"><div class="row" id="p-cat"><b>Vrsta</b><button class="c" data-v="all">Sve</button><button class="c" data-v="glava">Glave</button><button class="c" data-v="dio">Ostali dijelovi</button></div></div>
+<div class="list" id="p-list"></div>
+</section>
+
+<section class="tab" id="t-donori">
+<h2>Auti donori</h2>
+<p class="lead">Cijeli auti s ispravnim motorom CRCA. Isplati se ako se ostatak auta može prodati u dijelovima.</p>
+<div class="list" id="a-list"></div>
+</section>
+
+<section class="tab" id="t-kompatibilnost">
+<h2>Koji auti imaju motor CRCA</h2>
+<p class="lead">CRCA je 3.0 V6 TDI, 180 kW / 245 KS, 2967 cm³, provrt 83 mm, hod 91,4 mm, pogon razvoda lancem. Prije kupnje uvijek provjeri kod utisnut na bloku i broj šasije.</p>
+<div class="scroll"><table>
+<thead><tr><th>Vozilo</th><th>Izvedba</th><th>Snaga</th><th>Godišta</th></tr></thead>
+<tbody>
+<tr class="ok"><td>Audi Q7 (4L / 4LB)</td><td>3.0 TDI quattro</td><td>180 kW / 245 KS</td><td>05/2011 – 08/2015</td></tr>
+<tr class="ok"><td>Audi Q7 Van (4LB)</td><td>3.0 TDI quattro</td><td>180 kW / 245 KS</td><td>05/2011 – 08/2015</td></tr>
+<tr class="ok"><td>VW Touareg II (7P5, 7P6)</td><td>3.0 V6 TDI</td><td>180 kW / 245 KS</td><td>05/2011 – 03/2018</td></tr>
+<tr class="ok"><td>VW Touareg Van (7P5)</td><td>3.0 TDI 4motion</td><td>180 kW / 245 KS</td><td>05/2011 – 12/2014</td></tr>
+<tr class="ok"><td>Porsche Cayenne II (92A)</td><td>3.0 Diesel (MCR.CA / CRC)</td><td>180 kW / 245 KS</td><td>2011 – 2014</td></tr>
+<tr class="no"><td>Isti modeli, druga snaga</td><td>150, 176, 193, 200 kW</td><td>nije CRCA</td><td>CRCD, CJMA, CASA, CVWA, CRT…</td></tr>
+<tr class="no"><td>Audi A6 / A7 / A8 3.0 TDI</td><td>180 kW (CDUC, CDUD)</td><td>ista porodica</td><td>nije izravna zamjena</td></tr>
+<tr class="no"><td>Q7 / Touareg do 2010.</td><td>BUG, BKS, CASA, CCMA</td><td>starija generacija</td><td>ne odgovara</td></tr>
+</tbody></table></div>
+<p class="small" style="margin-top:10px">Izvor: tablice kompatibilnosti Motorlager24 i Fair-Motors za motor CRCA. Oglasi s više kodova u naslovu mogu biti generički; tražiti fotografiju pločice na bloku.</p>
+</section>
+
+<section class="tab" id="t-napomene">
+<h2>Napomene i metoda</h2>
+<p class="lead">Kako su podaci prikupljeni i na što paziti pri kupnji.</p>
+<div class="notes">
+<div class="pane"><h3>Izvori</h3><p>Njuškalo, Bolha, OLX.ba, KupujemProdajem, Willhaben, Kleinanzeigen, eBay (DE, AT, IT), Otomoto, Allegro, Bazoš (CZ, SK), RRR.lt, Subito, Facebook Marketplace te trgovine Motorlager24, Fair-Motors, LR Nord i MIK Motoren. Pregledano 21.11.2026.</p></div>
+<div class="pane"><h3>Cijene i tečaj</h3><p>Ukupna cijena uključuje dostavu gdje je objavljena. Polog za stari motor vraća se nakon povrata. Tečaj: 1 € = 4,23 PLN, 24,3 CZK, 1,956 KM.</p></div>
+<div class="pane"><h3>Udaljenost</h3><p>Okvirna udaljenost cestom od Kostanjevca (Žumberak). Trgovine koje šalju motor na adresu nemaju udaljenost.</p></div>
+<div class="pane"><h3>Dijagnoza prije kupnje</h3><p>Kod 0 bara kompresije na jednom cilindru test curenja tlaka pokazuje uzrok: zrak na usisu ili ispuhu znači ventil (dovoljna je glava), zrak kroz otvor za ulje znači klip (motor ili remont).</p></div>
+<div class="pane"><h3>Brtva glave</h3><p>Dolazi u više debljina, ovisno o prepustu klipa. Na staroj brtvi prebroji zareze ili rupice i uzmi novu s istim brojem.</p></div>
+<div class="pane"><h3>Što pitati prodavača</h3><p>Fotografiju koda s bloka (CRCA), kilometražu s dokazom, video rada, što je uključeno (turbina, brizgaljke, alternator), jamstvo i cijenu dostave do Hrvatske.</p></div>
+</div>
+</section>
+<section class="ispis" id="ispis">
+<h2>Svi motori s cijenom, po ukupnoj ocjeni</h2>
+<table><thead><tr><th>#</th><th>Motor</th><th>Prodavač</th><th>Država</th><th>Cijena</th><th>km</th><th>Jamstvo</th></tr></thead><tbody id="ispis-t"></tbody></table>
+<h2>Glava i dijelovi u blizini</h2>
+<p id="ispis-g"></p>
+</section>
+</main>
+<footer><div class="wrap">Motor 3.0 TDI CRCA · pregled tržišta · 21.11.2026 · podaci prema javnim oglasima, bez jamstva točnosti<span class="pw-print"> · Powered by Komadar</span></div></footer>
+
+<script>
+{
+const C={komplet:['Rabljeni kompletan','var(--or)'],remont:['Remontiran','var(--bl)'],goli:['Rabljeni goli','var(--vi)'],glava:['Glava','var(--gr)'],dio:['Dio','var(--gr)'],auto:['Auto donor','#6f747b']};
+const D=[
+// cat, name, seller/place, ctry, price(total €), priceText, km, dist, warranty, note, url, rank
+['remont','Remontiran motor, 1 god. jamstva','Kulasek, Kosztowo','PL',3770,'~3.770 € s dostavom',0,1050,'12 mj.','Napravljeni ležajevi, karike, honanje, ventili, lanci. Pitati je li kompletan.','https://www.otomoto.pl/czesci/oferta/silnik-audi-3-0-tdi-kod-crc-crca-modele-q7-vw-touareg-porsche-cayenne-nowy-rok-gwarancji-ID6Id3tc.html',1],
+['komplet','Kompletan, 41.000 km','SHI Motoren (oglas Willhaben/Leverkusen)','DE',4400,'4.400 € uz povrat starog / 4.800 € bez',41000,1150,'12 mj.','Turbina, ubrizgavanje, alternator. Prodavač iz Poljske, tel. +48 788 485 612.','https://www.willhaben.at/iad/kaufen-und-verkaufen/marktplatz?keyword=motor+crca',2],
+['komplet','Kompletan, 49.000 km','Spandau, Berlin','DE',4200,'4.200 € + dostava',49000,1100,'','','https://www.kleinanzeigen.de/s-anzeige/motor-crc-crca-245ps-49tkm-cayenne-q7-touareg-kpl/3218822966-223-3432',3],
+['komplet','Kompletan iz Touarega 2013, 87.000 km','Solin','HR',4500,'4.500 €',87000,400,'','Možeš ga čuti kako radi. Kod motora potvrditi.','https://www.njuskalo.hr/search/?keywords=motor+touareg+3.0+tdi+180kw',4],
+['remont','Remontiran goli motor','Motorlager24 (Fair-Motors)','DE',3930,'3.778 € + 152 € dostava (+933 € polog)',0,1050,'','Dodaci se prebacuju sa starog motora. Polog se vraća za stari motor. Dostavu u HR provjeriti.','https://motorlager24.de/shop/motor-crca/',5],
+['komplet','Kompletan, 34.907 km','ArcheonMotoren, Leverkusen','DE',4100,'4.100 € uz povrat / 4.400 € bez',34907,1150,'1 mj.','Kodovi u oglasu se ne slažu (CRC/CVV/CRCA). Tel. +48 609 971 188.','https://www.kleinanzeigen.de/s-anzeige/motor-audi-volkswagen-crc-cvv-crca-3-0tdi-audi-q7-vw-touareg-komp/3296508872-223-1990',6],
+['komplet','Kompletan, 37.000 km','Spandau, Berlin','DE',4400,'4.400 € + dostava',37000,1100,'','','https://www.kleinanzeigen.de/s-anzeige/motor-crca-audi-q7-touareg-cayenne-3-0tdi-245ps-37tkm-komplett/2820496741-223-3432',7],
+['komplet','S opremom, 129.000 km','Wachomotors, Wola Łużańska','PL',4232,'17.900 PLN (~4.230 €)',129000,800,'pisano','Video rada. Potvrditi kod CRCA. Tel. +48 880 880 301.','',8],
+['komplet','Q7 2012, rabljeni','Praha 9 (Bazoš.cz)','CZ',3090,'74.990 Kč (~3.090 €)',null,800,'','Najjeftiniji. Pitati kilometražu i što uključuje.','https://auto.bazos.cz/inzeraty/crca/',9],
+['komplet','Iz Cayennea 2014','Autoarka (RRR.lt)','LT',3884,'3.600 € + 284 € dostava u HR',null,null,'','Kilometraža nije navedena.','https://rrr.lt/en/search?q=CRCA',10],
+['komplet','Kompletan u naslovu','MB Turbas, Ratingen / Kaunas','DE',4500,'4.250–4.500 €, dogovor',null,1150,'12 mj.','Tel. +49 152 29210571.','https://www.kleinanzeigen.de/s-anzeige/porsche-cayenne-diesel-3-0tdi-180kw-245ps-motor-komplett-crc-crca/3574126322-223-1780',11],
+['komplet','Kompletan, 120.000 km','EMMA, Žilina (Bazoš.sk)','SK',5500,'5.500 €',120000,600,'na paljenje','','https://auto.bazos.sk/inzeraty/crca/',12],
+['komplet','Kompletan, 54.000 km','Spandau, Berlin','DE',4000,'4.000 € + dostava',54000,1100,'','','https://www.kleinanzeigen.de/s-anzeige/motor-crc-crca-3-0tdi-245ps-touareg-cayenne-audi-q7-54tkm-kpl/3554241220-223-3432',13],
+['komplet','Kompletan, 62.000 km','Spandau, Berlin','DE',4500,'4.500 € + dostava',62000,1100,'','','https://www.kleinanzeigen.de/s-anzeige/motor-crc-crca-3-0tdi-245ps-62tkm-touareg-q7-cayenne/2778713809-223-3432',14],
+['komplet','Kompletan','Moabit, Berlin','DE',4200,'4.200 € + dostava',null,1100,'','','https://www.kleinanzeigen.de/s-anzeige/motor-audi-q7-vw-touarg-3-0-tdi-crc-crca-cvv-245ps-komplett/3229706482-223-25921',15],
+['komplet','Iz Q7, 157.000 km','SILNIKIimport, Śmigiel','PL',4326,'18.299 PLN (~4.330 €)',157000,1000,'na upit','Turbina, ubrizgavanje, pumpa, alternator. Video rada.','https://www.otomoto.pl/czesci/oferta/silnik-kompletny-audi-q7-cayenne-3-0-tdi-v6-crc-crca-2011-2016-rok-volkswag-ID6Ik4QV.html',16],
+['komplet','Kompletan','Torgau','DE',4300,'4.300 € + dostava',null,950,'','','https://www.kleinanzeigen.de/s-anzeige/motor-porsche-cayenne-q7-3-0-tdi-crc-crca-cvv-komplett/2828063075-223-4188',17],
+['komplet','Kompletan','Torgau','DE',4500,'4.500 € + dostava',null,950,'','','https://www.kleinanzeigen.de/s-anzeige/motor-audi-q7-porsche-cayenne-3-0-tdi-crc-crca-cvc-245ps-komplett/2553880900-223-4188',18],
+['komplet','Kompletan, 1 god. jamstva','Massivecircle, Braga','PT',4450,'4.450 € + dostava',null,2600,'12 mj.','Popis dijelova na upit.','',19],
+['komplet','Q7 2013, s opremom','RMG-moto (Otomoto)','PL',4492,'19.000 PLN (~4.490 €)',null,1000,'na upit','Jedan izvor kaže kompletan, drugi goli blok. Pitati.','https://www.otomoto.pl/czesci/oferta/silnik-slupek-3-0-tdi-245km-crc-crca-audi-q7-vw-touareg-ii-7p-porsche-cayenne-panamera-ID6IjPPe.html',20],
+['komplet','Kompletan','Wanfried','DE',4650,'4.650 € + dostava',null,1000,'','','https://www.kleinanzeigen.de/s-anzeige/audi-q7-vw-touareg-3-0-tdi-porsche-crc-crca-motor-komplett/3459135002-223-4737',21],
+['komplet','Bez mjenjača i zamašnjaka, 152.000 km','Sauerland Motoren, Arnsberg','DE',4900,'4.900 € + polog 300–1.000 €',152000,1150,'osim dodataka','','https://www.kleinanzeigen.de/s-anzeige/motor-komplett-audi-q7-4l-toureg-cayenne-3-0-tdi-crc-crca-icar/3567484414-223-1814',22],
+['komplet','Iz Q7 2011, jamstvo','Harvida (RRR.lt)','LT',5084,'4.800 € + 284 € dostava u HR',null,null,'12 mj.','','https://rrr.lt/en/search?q=CRCA',23],
+['komplet','Kompletan','Wurzen (eBay)','DE',5000,'4.999,95 €',null,950,'zakonsko','','https://www.ebay.de/itm/257834141070',24],
+['komplet','Kompletan','Hachenburg','DE',4999,'4.999 €',null,1050,'','Isti prodavač ima oglase za Q7, Touareg i Cayenne.','https://www.kleinanzeigen.de/s-anzeige/audi-q7-3-0-tdi-v6-diesel-motor-crc-180kw-engine-crca/2043388997-223-18276',25],
+['komplet','Rabljeni do 130.000 km, 12 mj. jamstva','Fair-Motors, Königs Wusterhausen','DE',5009,'od 5.009 € + dostava',130000,1050,'12 mj.','Točna cijena i km tek u ponudi.','https://fair-motors.com/shop/engine-crca-audi-vw-q7-touareg-van-3-0-tdi-quattro-v6-4motion-245hp/',26],
+['komplet','Touareg, rabljeni','LR Nord, Hannover','DE',5024,'5.024,48 €',null,1100,'','Km nije naveden. Ima i Q7 za 5.450 € i 6.000 €.','https://lr-nord.de/produkt/motor-2010-2015-mk2-7p-volkswagen-touareg-3-0-v6-diesel-crca-euro-5/',27],
+['komplet','Cayenne 2014, 129.475 km','Welg Varuosad (RRR.lt)','EE',5214,'4.896 € + 318 € dostava u HR',129475,null,'12 mj.','','https://rrr.lt/en/search?q=CRCA',28],
+['remont','Djelomično remontiran','MIK Motoren','DE',5339,'5.039 € + 300 € dostava',0,1200,'da','Potpuno remontiran: 7.359 €.','https://www.mikmotoren.de/products/motoruberholung-crca/',29],
+['komplet','Cayenne 2014, 89.654 km','JUST-CAR','PL',5390,'19.799 PLN + 3.000 PLN dostava (~5.390 €)',89654,1000,'','Video rada.','',30],
+['komplet','Kompletan, 88.000–98.000 km','FUH autoteile24, Küstriner Vorland','DE',5499,'5.499 €',88000,1150,'','','https://www.kleinanzeigen.de/s-anzeige/motor-komplett-vw-touareq-crc-crca-3-0-tdi-97tkm-245-ps-top-motor/3548223408-223-21556',31],
+['komplet','CRC, 48.000 km','maracquattro, Delnice','HR',5999,'5.999 €',48000,110,'','Više oglasa i kodova, potvrditi koji motor. Tel. 098 674 149.','https://www.njuskalo.hr/search/?keywords=3.0+tdi+motor+crc',32],
+['komplet','Kompletan, 12 mj. jamstva','Gelsenkirchen','DE',5999,'5.999 €, dogovor',null,1200,'12 mj.','','https://www.kleinanzeigen.de/s-motor-crca/k0',33],
+['komplet','CRC/CRCA','olx.ba','BA',6135,'11.999 KM (~6.135 €)',null,null,'','','https://olx.ba/pretraga?q=motor+crca',34],
+['komplet','Kompletni, 37.000–89.000 km','Kamargo Motors (eBay)','DE',6350,'6.250–7.990 € + 100 €',37000,null,'','','https://www.ebay.de/sch/i.html?_nkw=motor+crca+komplett&_sop=15',35],
+['komplet','115.041 km, 6 mj. jamstva','Stocko Motors, Rivesaltes','FR',6490,'6.490 €',115041,1400,'6 mj.','','',36],
+['remont','Remontiran 0 km','Motorheld24 (eBay.at)','DE',7890,'7.890 € (+850 € polog)',0,null,'12 mj.','','https://www.ebay.at/itm/195729447676',37],
+['komplet','Rabljeni kompletan, Motorlager24','Motorlager24 (Fair-Motors)','DE',7100,'7.100 €, dostava 0 €',91500,null,'','','https://motorlager24.de/shop/motor-crca/',38],
+['komplet','Touareg 2014, 78.720 km','Auto Stanić, Trnovec Bartolovečki','HR',7587,'7.587 €',78720,90,'','Ima i 2013/227.720 km za 8.206 €.','https://autostanic.hr/search?q=059100099E',39],
+['goli','Rabljeni goli, ~91.500 km','Motorlager24 (Fair-Motors)','DE',4113,'3.941 € + 172 € (+400 € polog)',91500,1050,'','','https://motorlager24.de/shop/motor-crca/',40],
+['komplet','Kompletan, 132.000 km, 2 mj. jamstva','Nové Zámky (Bazoš.sk)','SK',null,'po dogovoru',132000,450,'2 mj.','','https://auto.bazos.sk/inzeraty/crca/',41],
+['komplet','Q7 CRCA i auto donor 2014','Target (Autotarget), Beograd','RS',null,'na upit',null,420,'da','Tel. +381 61 6060061.','https://www.kupujemprodajem.com/auto-delovi-i-alati/automobili-za-delove/delovi-audi-q7-2014-3-0-dizel-crca-motor-euro5-4x4/oglas/190075549',42],
+['komplet','Funkcionalan CRCA','T-Multi, Budimpešta','HU',null,'na upit',null,400,'','Tel. +36 70 3247888.','',43],
+['komplet','Rabljeni CRC s turbinom','Linea Turbo, Manerbio','IT',null,'na upit',null,550,'','Tel. +39 392 844 5052.','',44],
+['komplet','Još u vozilu, 208.000 km','Adrian, Baia Mare','RO',3000,'~3.000 €, potvrditi',208000,850,'','Moguća proba, zamijenjen razvod. Aktualnost nesigurna.','',45],
+['komplet','Iz Touarega 2013','Pabaltijo, Kaunas','LT',null,'na upit',212000,1600,'','','',46],
+['glava','Glava CRCA (059354DS)','max39, Pisarovina','HR',300,'300 €',null,35,'','Isti prodavač rastavlja cijeli 3.0 TDI: 25 dijelova. Tel. 095 343 8102.','https://www.njuskalo.hr/motor-pogonski-dijelovi/glava-motora-2.7-3.0-tdi-oglas-45103007',101],
+['glava','Glava CRCA (059353EK)','max39, Pisarovina','HR',300,'300 €',null,35,'','Vjerojatno druga strana. Tel. 095 343 8102.','https://www.njuskalo.hr/motor-pogonski-dijelovi/glava-motora-2.7-3.0-tdi-oglas-45103001',102],
+['glava','Glava 1–3 (059103264)','Global Parts','PL',270,'1.139,95 PLN (~270 €)',null,null,'','Potvrditi bregaste i ventile.','https://globalparts.co.uk/cylinder-heads/059103264/audi-q7-4l-vw-touareg-7l-3-0-tdi-crca-diesel-cylinder-head-cyl-1-3-059103264',103],
+['glava','Glava iz Q7 2012, 176.525 km','Vicars (RRR.lt)','LV',470,'299,99 € + 170 € dostava u HR',176525,null,'12 mj.','Dva komada.','https://rrr.lt/en/search?q=CRCA',104],
+['glava','Lijeva glava CRC/CRCA, kompletna','autoverwertung-bessler (eBay)','DE',325,'300 € + 25 € dostava',null,null,'','Iz Touarega 7P.','https://www.ebay.de/sch/i.html?_nkw=CRCA+Zylinderkopf',105],
+['dio','Rail pumpa, visokotlačna pumpa','max39, Pisarovina','HR',260,'260 €',null,35,'','','https://www.njuskalo.hr/korisnik/max39',106],
+['dio','Pumpa i brizgaljke','max39, Pisarovina','HR',100,'100 €',null,35,'','','https://www.njuskalo.hr/korisnik/max39',107],
+['dio','Rail rampe, poklopac ventila, EGR hladnjak, instalacija…','max39, Pisarovina','HR',null,'80–230 € po dijelu',null,35,'','Rail 80/85 €, poklopac ventila 100 €, EGR hladnjak 230 €, instalacija 170 €, remenica radilice 60 €.','https://www.njuskalo.hr/korisnik/max39',108],
+['dio','Visokotlačna pumpa 059130755CB','Detrolita','LT',170,'170 €',null,null,'12 mj.','Iz Touarega CRCA.','',109],
+['dio','Turbina Garrett 059145874T/L','Kaptol','HR',450,'450 €',null,30,'','Donor CDUC; usporediti puni broj.','',110],
+['dio','Radilica (standard i 0,25/0,50)','MOTORAS, Kaunas','LT',847,'~847 €',null,1600,'','Tražiti zapis mjerenja. Tel. +370 666 86665.','',111],
+['dio','Goli blok CRCA/CRC (059023AD)','teilehandel14 (eBay)','DE',984,'854 € + 130 € dostava',null,null,'','Ako je oštećena košuljica.','https://www.ebay.de/sch/i.html?_nkw=Motorblock+CRCA',112],
+['dio','Brtva glave Elring 299.720','motointegrator (eBay)','DE',37,'29,82 € + 6,95 €',null,null,'','Broj zareza prema staroj brtvi.','https://www.ebay.de/itm/357785095085',113],
+['dio','Brtva glave BGA CH0120A (059103383JL)','autoteiledirekt','DE',84,'84,48 €',null,null,'','Za Q7 4L, Touareg 7P, Cayenne 92A.','https://www.autoteiledirekt.de/bga-12994685.html',114],
+['dio','Set brtvi glave','sole-autoparts (eBay)','DE',127,'~127 €',null,null,'','Prodavač traži broj šasije.','https://www.ebay.de/itm/144885346021',115],
+['dio','Karike, set za 6 klipova','bfyour (eBay)','DE',169,'168,73 €',null,null,'','Provjeriti mjeru 83 mm.','https://www.ebay.de/itm/146987035589',116],
+['auto','Audi Q7 12/2013, 254.500 km, vozi se','Prostějov (Bazoš.cz)','CZ',7000,'169.999 Kč (~7.000 €)',254500,650,'','Ispravan CRCA u cijelom autu.','https://auto.bazos.cz/inzeraty/crca/',201],
+['auto','VW Touareg 12/2011, 271.900 km','Autobid (aukcija)','DE',8200,'početna 8.200 €',271900,null,'','Popravljena šteta. Konačna cijena viša.','https://autobid.de/en/item/vw-touareg-3-0-tdi-4motion-tiptronic-r-line-3358959/details',202],
+['auto','VW Touareg 2012, 391.000 km','Kaštela (Njuškalo)','HR',10000,'10.000 €',391000,420,'','','https://www.njuskalo.hr/search/?keywords=motor+touareg+3.0+tdi+180kw',203],
+['auto','VW Touareg 2013, 224.000 km','Bratislava (Bazoš.sk)','SK',11000,'11.000 €',224000,380,'','Bez zračnih jastuka.','https://auto.bazos.sk/inzeraty/crca/',204]
+].map(r=>({cat:r[0],nm:r[1],sel:r[2],c:r[3],p:r[4],pt:r[5],km:r[6],d:r[7],w:r[8],n:r[9],u:r[10],rk:r[11]}));
+const CN={HR:'Hrvatska',BA:'BiH',RS:'Srbija',SK:'Slovačka',CZ:'Češka',HU:'Mađarska',PL:'Poljska',DE:'Njemačka',IT:'Italija',LT:'Litva',LV:'Latvija',EE:'Estonija',RO:'Rumunjska',PT:'Portugal',FR:'Francuska'};
+const $=id=>document.getElementById(id);
+const fmt=n=>n==null?'?':n.toLocaleString('hr-HR');
+const MOT=['komplet','remont','goli'];
+const plural=n=>{const a=n%10,b=n%100;return n+(a>=2&&a<=4&&(b<12||b>14)?' ponude':' ponuda')};
+const kmTxt=x=>x.km===0?'0 km (remont)':x.km!=null?fmt(x.km)+' km':'km nepoznato';
+const card=(x,i)=>`<article class="card">
+<div class="top"><div class="nm">${x.nm}</div><div class="pr">${x.p!=null?fmt(x.p)+' €':'—'}</div></div>
+<div><span class="tag" style="background:${C[x.cat][1]}">${C[x.cat][0]}</span>${i!=null?`<span class="rk">#${i+1}</span>`:''}</div>
+<div class="meta"><span>${x.sel}</span><span>${CN[x.c]}</span>${['glava','dio'].includes(x.cat)&&x.km==null?'':`<span>${kmTxt(x)}</span>`}<span>${x.d!=null?'~'+fmt(x.d)+' km od Kostanjevca':'dostava na adresu'}</span>${x.w?`<span>jamstvo: ${x.w}</span>`:''}</div>
+<p class="note">${x.pt}${x.n?' · '+x.n:''}</p>
+${x.u?`<a href="${x.u}" target="_blank" rel="noopener">Otvori oglas</a>`:'<span class="small">Bez izravne poveznice; tražiti po prodavaču.</span>'}
+</article>`;
+const mot=D.filter(x=>MOT.includes(x.cat));
+const priced=mot.filter(x=>x.p!=null);
+$('kpi').innerHTML=[[priced.length,'motora s cijenom'],[fmt(Math.min(...priced.filter(x=>!/potvrditi/.test(x.pt)).map(x=>x.p)))+' €','najniža cijena'],[fmt(D.find(x=>x.rk===1).p)+' €','najbolja kupnja'],[new Set(D.map(x=>x.c)).size,'država']].map(k=>`<div><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+const top3=mot.filter(x=>x.rk<=3).sort((a,b)=>a.rk-b.rk);
+const why={1:'Remontiran na 0 km, godina jamstva, napravljeni ležajevi, karike i lanci.',2:'Mala kilometraža, 12 mjeseci jamstva, cijena uz povrat starog motora.',3:'Mala kilometraža za nisku cijenu, kompletan motor.'};
+$('picks').innerHTML=top3.map(x=>`<div class="pick"><span class="n">${x.rk}</span><span class="tag" style="background:${C[x.cat][1]};justify-self:start">${C[x.cat][0]}</span><div class="nm">${x.sel}</div><div class="pr">${fmt(x.p)} €</div><div class="meta"><span>${kmTxt(x)}</span>${x.w?`<span>jamstvo ${x.w}</span>`:''}<span>${CN[x.c]}</span></div><p class="note">${why[x.rk]}</p>${x.u?`<a href="${x.u}" target="_blank" rel="noopener">Otvori oglas</a>`:''}</div>`).join('');
+$('bars').innerHTML=priced.slice().sort((a,b)=>a.rk-b.rk).slice(0,10).map((x,i)=>`<div class="br"><div><div class="t"><span>${i+1}. ${x.sel.split(',')[0]}</span><span>${x.km===0?'0 km':x.km!=null?Math.round(x.km/1000)+'k km':'km ?'}${x.w?' · '+x.w:''}</span></div><div class="trk"><i style="width:${Math.min(100,x.p/8000*100)}%;background:${C[x.cat][1]}"></i></div></div><b>${fmt(x.p)} €</b></div>`).join('');
+let ms={s:'best',cat:'all',c:'all',q:''},ps={cat:'all'};
+try{Object.assign(ms,JSON.parse(localStorage.getItem('crca-m')||'{}'))}catch(e){}
+const used=[...new Set(mot.map(x=>x.c))].sort((a,b)=>CN[a].localeCompare(CN[b],'hr'));
+$('m-ctry').insertAdjacentHTML('beforeend','<button class="c" data-v="all">Sve</button>'+used.map(k=>`<button class="c" data-v="${k}">${CN[k]}</button>`).join(''));
+$('m-q').value=ms.q;
+const keyOf={best:x=>x.rk,price:x=>x.p??1e9,km:x=>x.km??1e9,dist:x=>x.d??1e9};
+const press=(id,v)=>$(id).querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v));
+function renderM(){
+  let a=mot.filter(x=>ms.cat==='all'||x.cat===ms.cat).filter(x=>ms.c==='all'||x.c===ms.c);
+  const q=ms.q.trim().toLowerCase();if(q)a=a.filter(x=>(x.nm+' '+x.sel+' '+x.n+' '+CN[x.c]).toLowerCase().includes(q));
+  const k=keyOf[ms.s];a.sort((x,y)=>k(x)-k(y)||x.rk-y.rk);
+  $('m-cnt').textContent=plural(a.length);
+  $('m-list').innerHTML=a.length?a.map(card).join(''):'<p class="note">Nema ponuda za ove filtre.</p>';
+  press('m-sort',ms.s);press('m-cat',ms.cat);press('m-ctry',ms.c);
+  try{localStorage.setItem('crca-m',JSON.stringify(ms))}catch(e){}
+}
+function renderP(){
+  const a=D.filter(x=>['glava','dio'].includes(x.cat)&&!/max39/.test(x.sel)).filter(x=>ps.cat==='all'||x.cat===ps.cat).sort((x,y)=>(x.p??1e9)-(y.p??1e9));
+  $('p-list').innerHTML=a.map(x=>card(x)).join('');press('p-cat',ps.cat);
+}
+$('a-list').innerHTML=D.filter(x=>x.cat==='auto').sort((a,b)=>a.p-b.p).map(x=>card(x)).join('');
+const on=(id,f)=>$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(b)f(b.dataset.v)});
+on('m-sort',v=>{ms.s=v;renderM()});on('m-cat',v=>{ms.cat=v;renderM()});on('m-ctry',v=>{ms.c=v;renderM()});on('p-cat',v=>{ps.cat=v;renderP()});
+$('m-q').addEventListener('input',e=>{ms.q=e.target.value;renderM()});
+renderM();renderP();
+$('ispis-t').innerHTML=priced.slice().sort((a,b)=>a.rk-b.rk).map((x,i)=>`<tr><td>${i+1}</td><td>${x.nm}</td><td>${x.sel}</td><td>${CN[x.c]}</td><td>${fmt(x.p)} €</td><td>${x.km===0?'0 (remont)':fmt(x.km)}</td><td>${x.w||''}</td></tr>`).join('');
+{const g=D.filter(x=>/max39/.test(x.sel)&&x.cat==='glava');$('ispis-g').textContent=g.length?`Pisarovina (max39, ~35 km od Kostanjevca): ${g.map(x=>x.nm.replace('Glava ','glava ')+' '+fmt(x.p)+' €').join(', ')}. Tel. 095 343 8102. Isti prodavač rastavlja cijeli motor i prodaje dijelove pojedinačno.`:''}
+$('pdf').addEventListener('click',()=>print());
+const TABS=['pregled','motori','dijelovi','donori','kompatibilnost','napomene'];
+const show=()=>{const h=location.hash.slice(1),t=TABS.includes(h)?h:'pregled';TABS.forEach(n=>$('t-'+n).classList.toggle('on',n===t));$('tabs').querySelectorAll('a').forEach(a=>{const c=a.getAttribute('href')==='#'+t;a.toggleAttribute('aria-current',false);if(c)a.setAttribute('aria-current','page')})};
+window.addEventListener('hashchange',()=>{show();const n=document.querySelector('nav.tabs');if(scrollY>n.offsetTop)scrollTo({top:n.offsetTop})});
+show();
+const SH={remont:'c',komplet:'s',goli:'t'},sv=$('sv');
+const draw=()=>{
+  const W=sv.clientWidth,H=sv.clientHeight;if(!W)return;
+  const ml=50,mr=14,mt=14,mb=34,pts=D.filter(x=>x.p!=null&&x.km!=null&&MOT.includes(x.cat)&&x.p<9000);
+  const x0=3500,x1=8000,k1=170000,X=v=>ml+(v-x0)/(x1-x0)*(W-ml-mr),Y=k=>H-mb-k/k1*(H-mt-mb);
+  let s=`<rect x="${X(x0)}" y="${Y(60000)}" width="${X(4600)-X(x0)}" height="${Y(-6000)-Y(60000)}" fill="var(--gr)" fill-opacity=".12" rx="6"/><text x="${X(x0)+6}" y="${Y(60000)-6}" style="fill:var(--gr);font-weight:500">najbolja zona</text>`;
+  const step=W<520?1000:500;
+  for(let v=4000;v<=x1;v+=step)s+=`<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H-mb}" stroke="currentColor" stroke-opacity=".14"/><text x="${X(v)}" y="${H-mb+18}" text-anchor="middle">${(v/1000).toLocaleString('hr-HR')}k €</text>`;
+  for(let k=0;k<=150000;k+=50000)s+=`<line x1="${ml}" x2="${W-mr}" y1="${Y(k)}" y2="${Y(k)}" stroke="currentColor" stroke-opacity=".14"/><text x="${ml-6}" y="${Y(k)+4}" text-anchor="end">${k?k/1000+'k':'0'} km</text>`;
+  pts.forEach(x=>{const cx=X(x.p),cy=Y(x.km),f=C[x.cat][1],t=`<title>${x.sel}: ${x.pt}, ${x.km===0?'0 km':fmt(x.km)+' km'}</title>`;s+=SH[x.cat]==='c'?`<circle cx="${cx}" cy="${cy}" r="6" fill="${f}">${t}</circle>`:SH[x.cat]==='s'?`<rect x="${cx-5.5}" y="${cy-5.5}" width="11" height="11" rx="2" fill="${f}">${t}</rect>`:`<path d="M${cx} ${cy-7}L${cx+7} ${cy+5}L${cx-7} ${cy+5}Z" fill="${f}">${t}</path>`});
+  top3.forEach(x=>{const cx=X(x.p),cy=Y(x.km);s+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/><text x="${cx+13}" y="${cy+(x.rk===1?-6:x.rk===2?14:4)}" style="fill:var(--ink);font-weight:500">${x.rk}.</text>`});
+  sv.style.color='var(--mute)';sv.innerHTML=s;
+};
+const ro=new ResizeObserver(draw);ro.observe(sv);
+}
+</script>
+</body>
+</html>

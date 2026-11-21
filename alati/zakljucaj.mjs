@@ -2,8 +2,9 @@
 // Bez lozinke se sadržaj ne može pročitati ni iz izvornog koda ni iz repozitorija.
 // Upotreba (lozinka se ne upisuje u naredbu, nego u varijablu okoline):
 //   PowerShell:  $env:CRCA_LOZINKA = '...'; node alati/zakljucaj.mjs
-// Izvor (izvor/index.html) se NE stavlja u javni repo (.gitignore).
-import { readFileSync, writeFileSync } from 'node:fs';
+// Izvor je u izvor/ (repo mora biti PRIVATAN). Izlaz ide u objava/ (Cloudflare Pages: izlazna mapa objava).
+// Lokalno: zakljucaj.cmd (skriveni upis lozinke). Cloudflare: tajna varijabla CRCA_LOZINKA.
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync } from 'node:fs';
 import { webcrypto as wc } from 'node:crypto';
 
 const ITER = 600000;
@@ -52,5 +53,8 @@ pw.addEventListener('input',()=>{pe.textContent=''});})();
 </body>
 </html>
 `;
-writeFileSync(new URL('../index.html', import.meta.url), page);
-console.log('Gotovo: index.html zaključan (' + page.length + ' znakova).');
+const out = new URL('../objava/', import.meta.url);
+mkdirSync(out, { recursive: true });
+writeFileSync(new URL('index.html', out), page);
+for (const f of readdirSync(new URL('../izvor/', import.meta.url))) if (f !== 'index.html') copyFileSync(new URL('../izvor/' + f, import.meta.url), new URL(f, out));
+console.log('Gotovo: objava/index.html zaključan (' + page.length + ' znakova).');
