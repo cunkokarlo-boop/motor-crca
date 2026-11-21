@@ -124,6 +124,32 @@ body.locked .lock{display:grid}
 .hero h1,h2,.kpi b,.pick .n,.lock h1{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700;letter-spacing:0}
 @media(max-width:860px){.hgrid{grid-template-columns:1fr}.draw{max-width:460px;order:-1}}
 @media(max-width:600px){.kpi{grid-template-columns:1fr 1fr}table{font-size:13px}th,td{padding:8px}.fig{height:260px}.hero p.sub{font-size:16px}}
+.pdf{margin-top:14px;font:inherit;font-size:15px;font-weight:600;min-height:44px;padding:8px 18px;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:var(--hink);cursor:pointer}
+.pdf:hover{border-color:#fff}.pdf:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+.ispis,.pw-print{display:none}
+@media print{
+@page{size:A4;margin:12mm}
+:root{color-scheme:light!important}
+body{background:#fff;color:#111;font-size:10.5pt;line-height:1.4}
+nav.tabs,.tab,.lock,.pdf,.draw,.meta-line{display:none!important}
+.hero{background:#fff;color:#111;border-bottom:2px solid #e31e28}
+.hero h1{font-size:24pt}.hero p.sub{color:#333;font-size:10.5pt;margin-bottom:10px}
+.hgrid{grid-template-columns:1fr;padding:0 0 10px}
+.kpi{grid-template-columns:repeat(4,1fr)}.kpi div{border-color:#ccc;background:none}.kpi span{color:#444}
+#t-pregled{display:block!important;padding:10px 0 0;animation:none}
+#t-pregled .grid2,#t-pregled .lead{display:none}
+#t-pregled h2{font-size:15pt}
+.picks{grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0}
+.pick{border-color:#ccc;padding:10px 12px;break-inside:avoid}.pick a{display:none}.pick .pr{font-size:16pt}
+.ispis{display:block;margin-top:10px}
+.ispis h2{font-size:13pt;margin:10px 0 4px}
+.ispis table{font-size:8.5pt}.ispis th,.ispis td{padding:2px 5px;border-color:#ddd}
+.ispis tr{break-inside:avoid}
+.ispis p{font-size:10pt;margin:0}
+.tag{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+footer{border-color:#ccc;padding:8px 0 0}.pw-print{display:inline}
+.wrap{max-width:none;padding:0}
+}
 @media(prefers-reduced-motion:no-preference){.tab.on{animation:in .25s ease both}@keyframes in{from{opacity:0;transform:translateY(6px)}}.piston{animation:pump 2.4s ease-in-out infinite}.piston.b{animation-delay:-1.2s}@keyframes pump{50%{transform:translateY(10px)}}}
 </style>
 </head>
@@ -137,6 +163,7 @@ body.locked .lock{display:grid}
 <h1>Motor 3.0 TDI <span>CRCA</span>: pregled tržišta</h1>
 <p class="sub">Rabljeni, remontirani i goli motori, glave i dijelovi te auti donori za Audi Q7 4L, VW Touareg 7P i Porsche Cayenne 92A (180 kW). Ponude iz 15 država, poredane po cijeni, kilometraži i udaljenosti.</p>
 <div class="kpi" id="kpi"></div>
+<button class="pdf" type="button" id="pdf">Spremi kao PDF</button>
 </div>
 <div class="draw" aria-hidden="true">
 <svg viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -265,8 +292,14 @@ body.locked .lock{display:grid}
 <div class="pane"><h3>Što pitati prodavača</h3><p>Fotografiju koda s bloka (CRCA), kilometražu s dokazom, video rada, što je uključeno (turbina, brizgaljke, alternator), jamstvo i cijenu dostave do Hrvatske.</p></div>
 </div>
 </section>
+<section class="ispis" id="ispis">
+<h2>Svi motori s cijenom, po ukupnoj ocjeni</h2>
+<table><thead><tr><th>#</th><th>Motor</th><th>Prodavač</th><th>Država</th><th>Cijena</th><th>km</th><th>Jamstvo</th></tr></thead><tbody id="ispis-t"></tbody></table>
+<h2>Glava i dijelovi u blizini</h2>
+<p id="ispis-g"></p>
+</section>
 </main>
-<footer><div class="wrap">Motor 3.0 TDI CRCA · pregled tržišta · 21.11.2026 · podaci prema javnim oglasima, bez jamstva točnosti</div></footer>
+<footer><div class="wrap">Motor 3.0 TDI CRCA · pregled tržišta · 21.11.2026 · podaci prema javnim oglasima, bez jamstva točnosti<span class="pw-print"> · Powered by Komadar</span></div></footer>
 
 <script>
 {
@@ -390,6 +423,9 @@ const on=(id,f)=>$(id).addEventListener('click',e=>{const b=e.target.closest('bu
 on('m-sort',v=>{ms.s=v;renderM()});on('m-cat',v=>{ms.cat=v;renderM()});on('m-ctry',v=>{ms.c=v;renderM()});on('p-cat',v=>{ps.cat=v;renderP()});
 $('m-q').addEventListener('input',e=>{ms.q=e.target.value;renderM()});
 renderM();renderP();
+$('ispis-t').innerHTML=priced.slice().sort((a,b)=>a.rk-b.rk).map((x,i)=>`<tr><td>${i+1}</td><td>${x.nm}</td><td>${x.sel}</td><td>${CN[x.c]}</td><td>${fmt(x.p)} €</td><td>${x.km===0?'0 (remont)':fmt(x.km)}</td><td>${x.w||''}</td></tr>`).join('');
+{const g=D.filter(x=>/max39/.test(x.sel)&&x.cat==='glava');$('ispis-g').textContent=g.length?`Pisarovina (max39, ~35 km od Kostanjevca): ${g.map(x=>x.nm.replace('Glava ','glava ')+' '+fmt(x.p)+' €').join(', ')}. Tel. 095 343 8102. Isti prodavač rastavlja cijeli motor i prodaje dijelove pojedinačno.`:''}
+$('pdf').addEventListener('click',()=>print());
 const TABS=['pregled','motori','dijelovi','donori','kompatibilnost','napomene'];
 const show=()=>{const h=location.hash.slice(1),t=TABS.includes(h)?h:'pregled';TABS.forEach(n=>$('t-'+n).classList.toggle('on',n===t));$('tabs').querySelectorAll('a').forEach(a=>{const c=a.getAttribute('href')==='#'+t;a.toggleAttribute('aria-current',false);if(c)a.setAttribute('aria-current','page')})};
 window.addEventListener('hashchange',()=>{show();const n=document.querySelector('nav.tabs');if(scrollY>n.offsetTop)scrollTo({top:n.offsetTop})});
