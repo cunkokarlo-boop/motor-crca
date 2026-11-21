@@ -2,14 +2,15 @@
 // Bez lozinke se sadržaj ne može pročitati ni iz izvornog koda ni iz repozitorija.
 // Upotreba (lozinka se ne upisuje u naredbu, nego u varijablu okoline):
 //   PowerShell:  $env:CRCA_LOZINKA = '...'; node alati/zakljucaj.mjs
-// Izvor je u izvor/ (repo mora biti PRIVATAN). Izlaz ide u objava/ (Cloudflare Pages: izlazna mapa objava).
+// Izvor je u izvor/ (repo je javan: lozinka je za red, ne za tajnost). Izlaz ide u objava/ (Cloudflare Pages: izlazna mapa objava).
 // Lokalno: zakljucaj.cmd (skriveni upis lozinke). Cloudflare: tajna varijabla CRCA_LOZINKA.
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, readdirSync } from 'node:fs';
 import { webcrypto as wc } from 'node:crypto';
 
 const ITER = 600000;
 const pass = process.env.CRCA_LOZINKA || '';
-if (pass.length < 10) { console.error('Lozinka mora imati barem 10 znakova (CRCA_LOZINKA).'); process.exit(1); }
+if (pass.length < 4) { console.error('Lozinka mora imati barem 4 znaka (CRCA_LOZINKA).'); process.exit(1); }
+if (pass.length < 10) console.warn('Upozorenje: lozinka kraća od 10 znakova lako se pogađa (dovoljno samo za red).');
 const src = readFileSync(new URL('../izvor/index.html', import.meta.url), 'utf8');
 const enc = new TextEncoder();
 const salt = wc.getRandomValues(new Uint8Array(16));
