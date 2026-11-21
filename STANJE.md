@@ -1,21 +1,25 @@
 # STANJE: motor-crca
 
-Stanje: 21.11.2026., 15:08
+Stanje: 21.11.2026., 16:28
 
 ## Što je ovo
 Pregled tržišta za zamjenski motor **3.0 TDI CRCA** (180 kW / 245 KS) za Audi Q7 4L 2012. Na jednom cilindru je 0 bara kompresije, a ostatak motora je navodno ispravan. Stranica ide ljudima s kojima Karlo želi suradnju, pa mora izgledati ozbiljno.
 
-## Gdje je objavljeno (sve tri lokacije imaju isti index.html)
+## Gdje je objavljeno
 | Mjesto | Adresa | Napomena |
 |---|---|---|
-| Netlify (glavna za dijeljenje) | https://motor-crca.netlify.app | Javna. Objava ručno, preko Netlify Drop (projekt `motor-crca`). NIJE povezan s GitHubom. |
-| GitHub Pages | https://cunkokarlo-boop.github.io/motor-crca/ | Javni repo `cunkokarlo-boop/motor-crca`, grana `main`. Karlo ne želi „cunkokarlo” u adresi, zato je Netlify glavni. |
-| Claude artifact | https://claude.ai/artifact/4MnrBwjh9tXXphBbimt6aV | Slug `1b328bd7-ef59-4355-9a38-d3b28cf6d822`. |
+| **Cloudflare Pages (glavna, od 21.11.2026.)** | https://motor-crca.pages.dev | Push na `main` objavljuje sam (build `node alati/zakljucaj.mjs`, izlaz `objava`). Lozinka je tajna varijabla `CRCA_LOZINKA` u Cloudflareu (nije u repou). 0 kredita. |
+| GitHub Pages | https://cunkokarlo-boop.github.io/motor-crca/ | Samo preusmjerava na motor-crca.pages.dev (korijenski `index.html`). |
+| Netlify (stara kopija) | https://motor-crca.netlify.app | Stara verzija sa šifrom 0000. Briše se nakon Karlove potvrde. |
+| Claude artifact (stara kopija) | https://claude.ai/artifact/4MnrBwjh9tXXphBbimt6aV | Stara verzija. Povlači se nakon Karlove potvrde. |
 
-**Izvor istine:** `index.html` u ovom repozitoriju (`main`). Nakon svake izmjene osvježiti i Netlify (Drop) i artifact, inače se verzije razilaze.
+**Izvor istine:** `izvor/index.html` (i slike u `izvor/`). Uputa: `ZASTITA.md`. Lokalna proba: `zakljucaj.cmd`.
 
-## Šifra
-`0000`, provjera na klijentu (samo skriva prikaz, nije prava zaštita). Repo je javan, pa su podaci u izvornom kodu vidljivi; Karlo je to prihvatio.
+## Lozinka
+Stranica je šifrirana lozinkom (AES-GCM) koju Karlo dijeli maloj grupi. Karlo 21.11.2026.: podaci nisu osjetljivi, lozinka je za red. Repo ostaje javan, pa je čitljiv izvor vidljiv na GitHubu.
+
+## Izgled (21.11.2026.)
+Komadar crvena #E31E28 i font Barlow, „Powered by Komadar” gore lijevo na crtežu, pregled linka (og.png, 1200×630) i ikona, gumb „Spremi kao PDF” (2 stranice A4).
 
 ## Sadržaj stranice
 - **Zaglavlje:** tehnički crtež V6 (provrt 83, hod 91,4, 90°) i četiri brojke: broj motora s cijenom, najniža cijena, najbolja kupnja, broj država.
@@ -34,9 +38,9 @@ Pregled tržišta za zamjenski motor **3.0 TDI CRCA** (180 kW / 245 KS) za Audi 
 1. Karlo napravi test curenja tlaka i javi rezultat. O tome ovisi kupuje li se glava ili motor.
 2. Nazvati Pisarovinu (kontakt na stranici, tab Dijelovi): ima li blok, klipove i radilicu te zašto je motor rastavljen.
 3. Kod top 3 ponude provjeriti kod na bloku (CRCA), kilometražu, uključenu opremu i dostavu do HR.
-4. Poruke prodavačima (DE/CZ/PL/SRB) su ponuđene, ali nisu napisane.
+4. Nacrti poruka prodavačima za oba ishoda testa su na grani `powered-by-komadar` (`nacrti-poruka/`, nije u mainu). Šalju se samo na Karlovu riječ.
 5. Neprovjereno: Index oglasi (zapelo na kolačićima), Avto.net (pretraga dijelova ne radi), Hasznaltauto, ProxyParts (Cloudflare provjera, treba Karlov klik).
-6. Ideja: povezati Netlify s GitHub repoom radi automatske objave (sada ručno, Drop).
+6. Nakon Karlove potvrde obrisati Netlify kopiju i povući artifact.
 
 ## Napomene za rad
 - Udaljenosti su okvirne, cestom od Kostanjevca. Tečaj: 1 € = 4,23 PLN, 24,3 CZK, 1,956 KM.
