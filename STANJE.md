@@ -1,6 +1,6 @@
 # STANJE: motor-crca
 
-Stanje: 21.11.2026., 15:03
+Stanje: 21.11.2026., 15:08
 
 ## Što je ovo
 Pregled tržišta za zamjenski motor **3.0 TDI CRCA** (180 kW / 245 KS) za Audi Q7 4L 2012. Na jednom cilindru je 0 bara kompresije, a ostatak motora je navodno ispravan. Stranica ide ljudima s kojima Karlo želi suradnju, pa mora izgledati ozbiljno.
@@ -40,5 +40,5 @@ Pregled tržišta za zamjenski motor **3.0 TDI CRCA** (180 kW / 245 KS) za Audi 
 
 ## Napomene za rad
 - Udaljenosti su okvirne, cestom od Kostanjevca. Tečaj: 1 € = 4,23 PLN, 24,3 CZK, 1,956 KM.
-- Jezik stranice: čisti hrvatski. Bez brenda (nije ponuda Flash Metala).
+- Jezik stranice: čisti hrvatski. Nije ponuda Flash Metala. U zaglavlju (gore lijevo na crtežu) diskretni natpis „Powered by Komadar” sa znakom (Karlo 21.11.2026. „Može Powered by Komadar”).
 - `gh` token u sesiji nije radio. Repo je napravljen kroz preglednik, a push ide preko session git proxyja.
