@@ -19,10 +19,11 @@ const key = await wc.subtle.deriveKey({ name: 'PBKDF2', hash: 'SHA-256', salt, i
 const ct = new Uint8Array(await wc.subtle.encrypt({ name: 'AES-GCM', iv }, key, enc.encode(src)));
 const b64 = u => Buffer.from(u).toString('base64');
 const head = src.slice(0, src.indexOf('<style>')); // naslov, opis i pregled poveznice ostaju vidljivi
-const page = `${head.replace(/<link rel="preconnect"[\s\S]*$/, '')}<style>
-html,body{margin:0}body{min-height:100vh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;font:16px/1.5 Barlow,"Segoe UI",Arial,sans-serif;color:#f2f4f6;background-color:#15181c;background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px),repeating-linear-gradient(90deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px);border-bottom:2px solid #e31e28}
+const page = `${head.replace(/<link rel="preconnect"[\s\S]*$/, '')}<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0}body{min-height:100vh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;font:16px/1.5 Barlow,"Segoe UI",Arial,sans-serif;color:#f2f4f6}html{min-height:100%;background-color:#15181c;background-image:repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px),repeating-linear-gradient(90deg,transparent 0 31px,rgba(255,255,255,.05) 31px 32px)}
 form{background:#1d2126;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 24px;display:grid;gap:12px;width:min(100%,360px);box-sizing:border-box}
-h1{font-size:24px;margin:0}p{margin:0;color:#a9b0b8;font-size:15px}
+h1{font:700 28px/1.1 "Barlow Condensed","Arial Narrow",Arial,sans-serif;margin:0}p{margin:0;color:#a9b0b8;font-size:15px}
 input{font:inherit;font-size:18px;min-height:52px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:#111418;color:#fff;padding:0 12px}
 button{font:inherit;font-size:17px;font-weight:600;min-height:50px;border-radius:10px;border:0;background:#e31e28;color:#fff;cursor:pointer}
 button:disabled{opacity:.6}.err{color:#ff8a8a;font-size:14px;min-height:20px}.pw{font-size:12px;color:#a9b0b8;text-align:center}.pw b{color:#f2f4f6}
