@@ -262,7 +262,7 @@ function list(){
   const q=st.q.trim().toLowerCase();
   if(q)a=a.filter(x=>(x.nm+' '+x.sel+' '+x.n+' '+CN[x.c]).toLowerCase().includes(q));
   const k=keyOf[st.s];a.sort((x,y)=>k(x)-k(y)||x.rk-y.rk);
-  $('cnt').textContent=a.length+' ponuda';
+  const n=a.length,m10=n%10,m100=n%100;$('cnt').textContent=n+(m10===1&&m100!==11?' ponuda':m10>=2&&m10<=4&&(m100<12||m100>14)?' ponude':' ponuda');
   $('list').innerHTML=a.length?a.map((x,i)=>`<article class="card">
 <div class="top"><div class="nm">${x.nm}</div><div class="pr">${x.p!=null?fmt(x.p)+' €':'—'}</div></div>
 <div><span class="tag" style="background:${C[x.cat][1]}">${C[x.cat][0]}</span><span class="rk">#${i+1}</span></div>
@@ -283,9 +283,9 @@ const draw=()=>{
   const W=sv.clientWidth,H=sv.clientHeight,ml=46,mr=14,mt=12,mb=34,pts=D.filter(x=>x.p!=null&&x.km!=null&&['komplet','remont','goli'].includes(x.cat)&&x.p<9000);
   const x0=3500,x1=8000,k1=170000,X=v=>ml+(v-x0)/(x1-x0)*(W-ml-mr),Y=k=>H-mb-k/k1*(H-mt-mb);
   let s=`<rect x="${X(x0)}" y="${Y(60000)}" width="${X(4600)-X(x0)}" height="${Y(-6000)-Y(60000)}" fill="var(--gr)" fill-opacity=".12" rx="6"/><text x="${X(x0)+6}" y="${Y(60000)-6}" style="fill:var(--gr);font-weight:500">najbolja zona</text>`;
-  const step=W<520?1500:500;
+  const step=W<520?1000:500;
   for(let v=4000;v<=x1;v+=step){s+=`<line x1="${X(v)}" x2="${X(v)}" y1="${mt}" y2="${H-mb}" stroke="currentColor" stroke-opacity=".15"/><text x="${X(v)}" y="${H-mb+18}" text-anchor="middle">${(v/1000).toLocaleString('hr-HR')}k €</text>`}
-  for(let k=0;k<=150000;k+=50000){s+=`<line x1="${ml}" x2="${W-mr}" y1="${Y(k)}" y2="${Y(k)}" stroke="currentColor" stroke-opacity=".15"/><text x="${ml-6}" y="${Y(k)+4}" text-anchor="end">${k/1000}k km</text>`}
+  for(let k=0;k<=150000;k+=50000){s+=`<line x1="${ml}" x2="${W-mr}" y1="${Y(k)}" y2="${Y(k)}" stroke="currentColor" stroke-opacity=".15"/><text x="${ml-6}" y="${Y(k)+4}" text-anchor="end">${k?k/1000+'k':'0'} km</text>`}
   pts.forEach(x=>{const cx=X(x.p),cy=Y(x.km),f=C[x.cat][1],t=`<title>${x.sel}: ${x.pt}, ${x.km===0?'0 km':fmt(x.km)+' km'}</title>`;s+=SH[x.cat]==='c'?`<circle cx="${cx}" cy="${cy}" r="6" fill="${f}">${t}</circle>`:SH[x.cat]==='s'?`<rect x="${cx-5.5}" y="${cy-5.5}" width="11" height="11" rx="2" fill="${f}">${t}</rect>`:`<path d="M${cx} ${cy-7}L${cx+7} ${cy+5}L${cx-7} ${cy+5}Z" fill="${f}">${t}</path>`});
   D.filter(x=>x.rk<=3).forEach(x=>{const cx=X(x.p),cy=Y(x.km);s+=`<circle cx="${cx}" cy="${cy}" r="10" fill="none" stroke="var(--ink)" stroke-width="1.5"/><text x="${cx+13}" y="${cy+(x.rk===1?-6:x.rk===2?14:4)}" style="fill:var(--ink);font-weight:500">${x.rk}.</text>`});
   sv.style.color='var(--mute)';sv.innerHTML=s;
